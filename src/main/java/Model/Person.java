@@ -8,12 +8,12 @@ public abstract class Person implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    private String ssn;
+    protected String ssn;
 
-    private Name name;
-    private String address;
-    private String emailAddress;
-    private String[] phoneNumber;
+    protected Name name;
+    protected String address;
+    protected String emailAddress;
+    protected String[] phoneNumber;
 
     Person(String ssn, Name name, String address, String emailAddress, String[] phoneNumber) {
         this.ssn = ssn;

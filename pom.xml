@@ -71,7 +71,7 @@
 								<goal>java</goal>
 							</goals>
 							<configuration>
-								<mainClass>Bank</mainClass>
+								<mainClass>App.Bank</mainClass>
 							</configuration>
 						</execution>
 					</executions>
