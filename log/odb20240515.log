@@ -23,3 +23,61 @@ Configuration path: ?
 [2024-05-15 01:18:03 #3 store] 
 Database 'C:\Users\Kareem\.m2\db\App.Bank.odb' is closed by 36936@Kareem-Victus-Laptop
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2024-05-15 22:47:45 #1 explorer] 
+[ObjectDB 2.8.9] javax.persistence.PersistenceException
+Attempt to open a database file 'C:\Users\Kareem\.m2\db\App.Bank.odb' that is currently in use by another process (error 141)
+	at com.objectdb.Explorer$1.run(Explorer.java:57)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: com.objectdb.o.UserException: Attempt to open a database file 'C:\Users\Kareem\.m2\db\App.Bank.odb' that is currently in use by another process
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.LFL.J(LFL.java:947)
+	at com.objectdb.o.LFL.x(LFL.java:904)
+	at com.objectdb.o.LFL.x(LFL.java:814)
+	at com.objectdb.o.DFL.<init>(DFL.java:241)
+	at com.objectdb.o.DMG.<init>(DMG.java:27)
+	at com.objectdb.o.MST.<init>(MST.java:127)
+	at com.objectdb.o.MST.ap(MST.java:109)
+	at com.objectdb.o.MSF.Y9(MSF.java:190)
+	at com.objectdb.o.OMF.s(OMF.java:805)
+	at com.objectdb.jpa.EMF.s(EMF.java:130)
+	at com.objectdb.o.OMF.x(OMF.java:716)
+	at com.objectdb.jpa.EMF.createEntityManager(EMF.java:149)
+	... 17 more
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2024-05-15 22:50:04 #1 store] 
+Database 'C:\Users\Kareem\.m2\db\App.Bank.odb' has been recovered (tr. 8823-9769)
+
+[2024-05-15 22:50:04 #2 store] 
+Database 'C:\Users\Kareem\.m2\db\App.Bank.odb' is opened by 26068@Kareem-Victus-Laptop
+
+[2024-05-15 22:50:04 #3 store] 
+Configuration path: ?
+
+[2024-05-15 22:54:06 #4 store] 
+Database 'C:\Users\Kareem\.m2\db\App.Bank.odb' is closed by 26068@Kareem-Victus-Laptop
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2024-05-15 22:54:17 #1 store] 
+Database 'C:\Users\Kareem\.m2\db\App.Bank.odb' is opened by 16380@Kareem-Victus-Laptop
+
+[2024-05-15 22:54:17 #2 store] 
+Configuration path: ?
+
