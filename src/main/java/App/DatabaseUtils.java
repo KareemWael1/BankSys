@@ -77,42 +77,6 @@ public class DatabaseUtils {
 
     public static void populateDatabase() {
         em = Bank.getEntityManager();
-        // Remove all existing customer objects:
-        em.getTransaction().begin();
-        Query query = em.createQuery("DELETE FROM Customer c");
-        query.executeUpdate();
-        em.getTransaction().commit();
-        // Remove all existing name objects:
-        em.getTransaction().begin();
-        query = em.createQuery("DELETE FROM Name n");
-        query.executeUpdate();
-        em.getTransaction().commit();
-        // Remove all existing account objects:
-        em.getTransaction().begin();
-        query = em.createQuery("DELETE FROM Account a");
-        query.executeUpdate();
-        em.getTransaction().commit();
-        // Remove all existing transaction objects:
-        em.getTransaction().begin();
-        query = em.createQuery("DELETE FROM Transaction t");
-        query.executeUpdate();
-        em.getTransaction().commit();
-        // Remove all existing branch objects:
-        em.getTransaction().begin();
-        query = em.createQuery("DELETE FROM Branch b");
-        query.executeUpdate();
-        em.getTransaction().commit();
-        // Remove all existing employee objects:
-        em.getTransaction().begin();
-        query = em.createQuery("DELETE FROM Employee e");
-        query.executeUpdate();
-        em.getTransaction().commit();
-        // Remove all existing service objects:
-        em.getTransaction().begin();
-        query = em.createQuery("DELETE FROM Service s");
-        query.executeUpdate();
-        em.getTransaction().commit();
-
 
         // Store 10 Customer objects in the database:
         em.getTransaction().begin();
