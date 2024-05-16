@@ -97,10 +97,7 @@ public class Home extends JFrame {
         newBranchButton = new JButton("New Branch");
         newServiceButton = new JButton("New Service");
         query1Button = new JButton("Query 1");
-        query2Button = new JButton("Query 2");
-        query3Button = new JButton("Query 3");
-        query4Button = new JButton("Query 4");
-        query5Button = new JButton("Query 5");
+
 
         // Add buttons to the panel
         panel1.add(newCustomerButton);
@@ -110,10 +107,7 @@ public class Home extends JFrame {
         panel1.add(newBranchButton);
         panel1.add(newServiceButton);
         panel1.add(query1Button);
-        panel1.add(query2Button);
-        panel1.add(query3Button);
-        panel1.add(query4Button);
-        panel1.add(query5Button);
+
 
         // Add panel to the frame
         this.add(panel1);

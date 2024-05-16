@@ -16,7 +16,7 @@ public class Bank {
         em = emf.createEntityManager();
 
 //        DatabaseUtils.populateDatabase(); // commment again after run
-
+        //DatabaseUtils.populateDatabase2();
         // Find the number of Customer objects in the database:
         Query q1 = em.createQuery("SELECT COUNT(c) FROM Customer c");
         System.out.println("Total Customers: " + q1.getSingleResult());
