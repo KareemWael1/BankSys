@@ -417,4 +417,16 @@ public class DatabaseUtils {
             em.getTransaction().commit();
         }
     }
+
+    public static void populateDatabase2(){
+        EntityManager em = Bank.getEntityManager();
+        List<Employee> employees = em.createQuery("SELECT e FROM Employee e", Employee.class).getResultList();
+        for(Employee employee : employees){
+            em.getTransaction().begin();
+            Long branchId = employee.getBranch().getBranchID();
+            Branch branch = em.find(Branch.class, branchId);
+            branch.addEmployee(employee);
+            em.getTransaction().commit();
+        }
+    }
 }
