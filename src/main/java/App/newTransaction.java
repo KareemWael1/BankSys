@@ -96,8 +96,7 @@ public class newTransaction extends JFrame {
                 em.getTransaction().begin();
                 Account a = em.find(Account.class,textField6.getText());
 
-                Transaction transaction = new Transaction(textField2.getText(), Double.parseDouble(textField3.getText()), new Date(System.currentTimeMillis()),
-                        textField5.getText(), a);
+                Transaction transaction = new Transaction(textField2.getText(), Double.parseDouble(textField3.getText()), new Date(System.currentTimeMillis()), null, a);
 
                 em.persist(transaction);
                 em.getTransaction().commit();
