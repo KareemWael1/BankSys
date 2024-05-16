@@ -1,5 +1,6 @@
 package App;
 
+import Model.Branch;
 import Model.Customer;
 import Model.Name;
 
@@ -10,7 +11,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class newCustomer extends JFrame {
+public class newBranch extends JFrame {
     private JPanel panel1;
     private JTextField textField1;
     private JTextField textField2;
@@ -26,9 +27,9 @@ public class newCustomer extends JFrame {
     public EntityManagerFactory emf;
     public EntityManager em;
 
-    public newCustomer(EntityManagerFactory emf, EntityManager em) {
+    public newBranch(EntityManagerFactory emf, EntityManager em) {
         // Set the title of the form
-        setTitle("New Customer Form");
+        setTitle("New Branch Form");
 
         // Set the size of the form
         setSize(400, 400);
@@ -72,26 +73,15 @@ public class newCustomer extends JFrame {
         submitButton = new JButton("Submit");
 
         // Add components to the panel
-        panel1.add(new JLabel("SSN:"));
-        panel1.add(textField1);
-        panel1.add(new JLabel("First Name:"));
+
+        panel1.add(new JLabel("Branch Name:"));
         panel1.add(textField2);
-        panel1.add(new JLabel("Middle Name:"));
+        panel1.add(new JLabel("Branch Address:"));
         panel1.add(textField3);
-        panel1.add(new JLabel("Last Name:"));
+        panel1.add(new JLabel("Opening Hours:"));
         panel1.add(textField4);
-        panel1.add(new JLabel("Address:"));
-        panel1.add(textField5);
-        panel1.add(new JLabel("Email Address:"));
-        panel1.add(textField6);
-        panel1.add(new JLabel("Phone Number:"));
-        panel1.add(textField7);
-        panel1.add(new JLabel("Credit Score:"));
-        panel1.add(textField8);
-        panel1.add(new JLabel("Customer Segment:"));
-        panel1.add(textField9);
-        panel1.add(new JLabel("Marketing Preferences:"));
-        panel1.add(textField10);
+
+
 
         // Add the submit button
         panel1.add(submitButton);
@@ -100,17 +90,11 @@ public class newCustomer extends JFrame {
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Handle the form submission
-
+                // Handle the form submission here
                 em.getTransaction().begin();
-                Name name = new Name(textField2.getText(),
-                        textField3.getText(),textField4.getText());
-                em.persist(name);
-                Customer customer = new Customer(textField1.getText(),name , textField5.getText(), textField6.getText(),
-                        new String[]{textField7.getText()}, Integer.parseInt(textField8.getText()),
-                        textField9.getText(), textField10.getText());
+                Branch branch = new Branch(textField2.getText() , textField3.getText(), textField4.getText());
 
-                em.persist(customer);
+                em.persist(branch);
                 em.getTransaction().commit();
                 JOptionPane.showMessageDialog(null, "Form submitted!");
             }

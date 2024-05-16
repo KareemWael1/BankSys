@@ -1,5 +1,7 @@
 package App;
 
+import Model.Service;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -145,6 +147,60 @@ public class Home extends JFrame {
             }
         });
 
+        newAccountButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Create an instance of the new form
+                newAccount newForm = new newAccount(emf, em);
+
+                // Set the new form to be visible
+                newForm.setVisible(true);
+            }
+        });
+
+        newTransactionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Create an instance of the new form
+                newTransaction newForm = new newTransaction(emf, em);
+
+                // Set the new form to be visible
+                newForm.setVisible(true);
+            }
+        });
+
+        newEmployeeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Create an instance of the new form
+                newEmployee newForm = new newEmployee(emf, em);
+
+                // Set the new form to be visible
+                newForm.setVisible(true);
+            }
+        });
+
+        newBranchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Create an instance of the new form
+                newBranch newForm = new newBranch(emf, em);
+
+                // Set the new form to be visible
+                newForm.setVisible(true);
+            }
+        });
+
+        newServiceButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Create an instance of the new form
+                newService newForm = new newService(emf, em);
+
+                // Set the new form to be visible
+                newForm.setVisible(true);
+            }
+        });
 
 
         // Add more action listeners for other buttons as needed

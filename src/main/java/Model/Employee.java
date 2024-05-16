@@ -30,12 +30,14 @@ public class Employee extends Person{
         for (Employee employee: managedEmployees){
             employee.setManager(this);
         }
+        manager.addManagedEmployee(this);
     }
 
     public Employee(String ssn, Name name, String address, String email, String[] phoneNumber, String jobTitle,
                     String departmentName, double salary, Date hireDate, Branch branch, Employee manager) {
         this(ssn, name, address, email, phoneNumber, jobTitle, departmentName, salary, hireDate, branch,
                 manager, new ArrayList<Employee>());
+
     }
 
     public String getJobTitle() {
